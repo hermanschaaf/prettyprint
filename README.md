@@ -5,13 +5,13 @@ A simple pretty printer for HTML, written in Go.
 
 #### Installation
 
-```
+```shell
 go get github.com/hermanschaaf/prettyprint
 ```
 
 #### Usage
 
-```
+```go
 import (
     "github.com/hermanschaaf/prettyprint"
     "fmt"
@@ -32,9 +32,8 @@ func main() {
 
 This will have the following output:
 
-```
-<html><head></head><body><a href="http://test.com">Test link</a><p><br/></p></body></html>`
-    expected := `<html>
+```html
+<html>
     <head>
     </head>
     <body>
