@@ -2,11 +2,10 @@ package prettyprint
 
 import (
 	"code.google.com/p/go.net/html"
-	"fmt"
 	"strings"
 )
 
-func PrettyPrint(raw string, indent string) (pretty string, e error) {
+func Prettify(raw string, indent string) (pretty string, e error) {
 	r := strings.NewReader(raw)
 	z := html.NewTokenizer(r)
 	pretty = ""
@@ -23,7 +22,6 @@ func PrettyPrint(raw string, indent string) (pretty string, e error) {
 		}
 		pretty += z.Token().String() + "\n"
 
-		fmt.Println(tt)
 		// last token
 		if tt == html.ErrorToken {
 			break

@@ -16,7 +16,7 @@ func TestPrettyPrint(t *testing.T) {
         </p>
     </body>
 </html>`
-	pretty, _ := PrettyPrint(html, "    ")
+	pretty, _ := Prettify(html, "    ")
 	if pretty != expected {
 		t.Errorf("Expected:\n\n%s\n\nbut got:\n\n%s", expected, pretty)
 	}
