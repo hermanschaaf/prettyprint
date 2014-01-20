@@ -5,6 +5,29 @@ import (
 	"strings"
 )
 
+// Prettify takes a string with unformatted HTML content and formats
+// it prettily with indentation supplied through the indent argument.
+//
+// For example, it takes a string of html like this:
+//
+//     <html><head></head><body><p>Hello</p></body></html>
+//
+// and formats it into this:
+//
+// <html>
+//     <head>
+//     </head>
+//     <body>
+//         <a href="http://test.com">Test link</a>
+//         <p>
+//             <br/>
+//         </p>
+//     </body>
+// </html>
+//
+// if the provided indent parameter is a string with four spaces ("    ").
+//
+// It returns the prettified string :pretty:, and possibly an error :e:
 func Prettify(raw string, indent string) (pretty string, e error) {
 	r := strings.NewReader(raw)
 	z := html.NewTokenizer(r)
