@@ -47,6 +47,6 @@ This will have the following output:
 
 #### Known issues
 
- - Poor support for self-closing tags, like HTML5 `<br>`. For now, only explicitly self-closing tags like `</br>` will print correctly. 
+ - Poor support for self-closing tags, like HTML5 `<br>`. For now, only explicitly self-closing tags like `<br/>` will print correctly. 
  - No special cases for `<pre>` and `<code>` tags
  - Comments may or may not work, they are more or less untested
